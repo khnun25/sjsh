@@ -1,0 +1,52 @@
+local Settings = {
+
+    ["Farming"] = {
+
+        AutoGainSpeed = true
+
+    }
+
+}
+
+spawn(function()
+
+    while task.wait() do
+
+        if Settings.Farming.AutoGainSpeed then
+
+            pcall(function()
+
+                local ohTable1 = {
+
+                    ["Character"] = workspace[game.Players.LocalPlayer.Name],
+
+                    ["CFrame"] = CFrame.new(-10506.9502, 117.000008, -6161.60352, 0.713832736, 0, 0.700316191, 0, 1, 0, -0.700316191, 0, 0.713832736),
+
+                    ["IsRunning"] = true
+
+                }
+
+                game:GetService("ReplicatedStorage").Knit.Services.CharacterService.RE.UpdateCharacterState:FireServer(ohTable1)
+
+                local ohTable1 = {
+
+                    ["Character"] = workspace[game.Players.LocalPlayer.Name],
+
+                    ["CFrame"] = CFrame.new(-9904.12305, 134.681351, -6909.17285, 0.995890319, 0.0884978175, -0.0192534514, -0.0905227959, 0.965926528, -0.242469832, -0.00286062993, 0.243216231, 0.969967902),
+
+                    ["IsRunning"] = true
+
+                }
+
+                
+
+                game:GetService("ReplicatedStorage").Knit.Services.CharacterService.RE.UpdateCharacterState:FireServer(ohTable1)
+
+            end)
+
+        end
+
+    end
+
+end)
+
